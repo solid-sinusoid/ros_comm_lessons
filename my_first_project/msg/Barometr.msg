@@ -1,0 +1,2 @@
+uint64 pressure
+float64 temperature
