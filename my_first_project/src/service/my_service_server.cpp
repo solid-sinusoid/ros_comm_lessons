@@ -6,12 +6,12 @@ bool euler2quad(my_first_project::euler2quat::Request &req,
 {
   ROS_INFO("Get params: r=%f p=%f y=%f", req.rpy.roll, req.rpy.pitch, req.rpy.yaw);
 
-  float cy = cos(req.rpy.yaw * 0.5);
-  float sy = sin(req.rpy.yaw * 0.5);
-  float cp = cos(req.rpy.pitch * 0.5);
-  float sp = sin(req.rpy.pitch * 0.5);
-  float cr = cos(req.rpy.roll * 0.5);
-  float sr = sin(req.rpy.roll * 0.5);
+  double cy = cos(req.rpy.yaw * 0.5);
+  double sy = sin(req.rpy.yaw * 0.5);
+  double cp = cos(req.rpy.pitch * 0.5);
+  double sp = sin(req.rpy.pitch * 0.5);
+  double cr = cos(req.rpy.roll * 0.5);
+  double sr = sin(req.rpy.roll * 0.5);
   res.xyw.w = cr * cp * cy + sr * sp * sy;
   res.xyw.x = sr * cp * cy - cr * sp * sy;
   res.xyw.y = cr * sp * cy + sr * cp * sy;
